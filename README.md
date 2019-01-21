@@ -6,6 +6,31 @@ For this question, I selected the wrong data types because I was confusing Javas
 ### Question 8
 I got this question wrong because I failed to remember proper naming conventions for variables declared with the const keyword. In javascript, convention dictates that variables declared with the let or var keyword are named in lowerCamelCase, where the first letter of the name is lowercase, and the first letter of every subsequent word is capitalized. However, const variables are declared with a different convention, in which the whole name is in caps, with underscores separating the words, such as "NUM_ONE." Since the question specifically asks for the MOST correct answer, `const PI = 3.14;` is more correct than `const pi = 3.14;`.
 
+### Queston 11
+```
+function offToCollege(){
+  let favCollege = prompt("What is your favorite college?");
+  let totalCost = prompt("Please enter the approximate cost of staying at " + favCollege + " for all 4 years.");
+  document.getElementById("off-to-college").innerHTML = favCollege + " is a pretty expensive school! It'll cost you $" + (totalCost/4) + " per year!"
+}
+
+function carpool(){
+  let numOfFriends = Number(prompt("How many friends do you want to bring to the movies?"));
+  let numOfSuvs = Number(prompt("How many SUVS are available for driving?"));
+  let suvsNeeded = Math.floor(numOfFriends/7);
+  let suvs;
+  let sedans;
+  if(suvsNeeded>numOfSuvs){
+    suvs = numOfSuvs;
+    sedans = Math.ceil((numOfFriends-(7*numOfSuvs))/4);
+    console.log(suvs + " parents who drive SUVs and " + sedans + " parents who drive sedans are required to transport the " + numOfFriends + " friends to the movies." );
+  }else if(suvsNeeded<numOfSuvs){
+    suvs = suvsNeeded;
+    sedans = Math.ceil((numOfFriends-(7*suvsNeeded))/4);
+    console.log(suvs + " parents who drive SUVs and " + sedans + " parents who drive sedans are required to transport the " + numOfFriends + " friends to the movies." );
+  }
+}
+```
 ## Quiz 5
 ### Question 14
 For this question, the correct answers were 
